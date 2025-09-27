@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+# streamlit
+  streamlit:
+    build:
+      context: ./
+    image: v1mr/streamlit:1.0.0    
+    container_name: streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app/:/app
+    restart: always
